@@ -21,7 +21,7 @@ function Edit(props) {
     <div className="editable">
       {isEditable ? (
         <form
-          className={`editable_edit ${props.editClass ? props.editClass : ""}`}
+          className={`edit_editable ${props.editClass ? props.editClass : ""}`}
           onSubmit={submission}
         >
           <input
@@ -31,7 +31,7 @@ function Edit(props) {
             onChange={(event) => setInputText(event.target.value)}
             autoFocus
           />
-          <div className="editable_edit_footer">
+          <div className="edit_footer">
             <button type="submit">{props.buttonText || "Add"}</button>
             <X onClick={() => setIsEditable(false)} className="closeIcon" />
           </div>
